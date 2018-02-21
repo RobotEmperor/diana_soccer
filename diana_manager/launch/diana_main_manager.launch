@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+
+<launch>    
+
+    <param name="gazebo"                   value="false"     type="bool"/>
+    <param name="gazebo_robot_name"        value="soccer_simulation" />
+
+    <param name="offset_table"             value="$(find diana_manager)/config/offset.yaml"/>
+    <param name="robot_file_path"          value="$(find diana_manager)/config/soccer_robot.robot"/>
+    <param name="init_file_path"           value="$(find diana_manager)/config/dxl_init.yaml"/>
+      
+    <!-- soccer_robot Manager -->
+    <node name="diana_main_manager" pkg="diana_manager" type="diana_main_manager" output="screen"/>
+    
+</launch>
+
